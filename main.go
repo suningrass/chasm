@@ -18,16 +18,6 @@ import (
 
 func main() {
 
-	/* // 1. 判断是否有管道数据
-	fi, _ := os.Stdin.Stat()
-	isPipe := (fi.Mode()&os.ModeNamedPipe != 0) || (fi.Mode()&os.ModeCharDevice == 0)
-
-	if isPipe {
-		// 2. 有管道 → 直接透传
-		_, _ = io.Copy(os.Stdout, os.Stdin)
-		return
-	}
-	*/
 	//读入
 	rawline := readRawLines()
 

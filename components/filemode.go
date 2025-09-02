@@ -123,11 +123,6 @@ func listWindowsDrives() map[string]os.DirEntry {
 	}
 	return out
 
-	/* // 非 Windows：仅根目录
-	if fi, err := os.Stat(rootPath); err == nil {
-		out[rootPath] = dirEntry{name: rootPath, fi: fi}
-	}
-	return out */
 }
 
 // dirEntry 轻量实现 os.DirEntry
