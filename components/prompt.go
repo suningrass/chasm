@@ -59,13 +59,6 @@ func InitialModel() Promptmodel {
 	fs := CreateFileChoose("./")
 	ac := CreateArgListMode()
 
-	/* vp := textarea.New()
-	vp.SetHeight(5)
-	vp.SetWidth(140) //和input大致一样
-	vp.ShowLineNumbers = false
-	vp.Prompt = " "
-	*/
-
 	p := Promptmodel{
 		Input:      ti,
 		Suggetions: sg,
@@ -91,15 +84,6 @@ func (p Promptmodel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	//p.vp, cmd = p.vp.Update(msg)
 	p.Input, cmd = p.Input.Update(msg)
 	currentword, startpos, endpos := wordAt(p.Input.Value(), p.Input.Position())
-
-	//p.vlog = p.Input.Value()
-
-	/* switch msg := msg.(type) {
-	case tea.WindowSizeMsg:
-		//p.Input.Width = msg.Width
-		//return p, nil
-		//p.debug = fmt.Sprintln("windowwith: ", msg.Width, "windowheight: ", msg.Height)
-	} */
 
 	switch p.Mode {
 	//cmd模式
