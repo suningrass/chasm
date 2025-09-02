@@ -65,8 +65,8 @@ Type seed → Tab to accept completion.
 At <filepath> hit Ctrl+O → FILEMODE to choose file.
 Tab to select → Enter inject path → Enter exit.
 Final command is now in clipboard; paste with Ctrl+V or run directly:
-
 chasm seed download /path/to/file | sh
+
 ⚙️ Customization
 | Method       | File                        | Notes                               |
 | ------------ | --------------------------- | ----------------------------------- |

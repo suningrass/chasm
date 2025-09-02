@@ -60,7 +60,7 @@ Enter：确认并返回 CMDMOD
 键入 seed → Tab 补全。
 光标到 <filepath> 时按 Ctrl+O → FILEMODE 选文件。
 Tab 选中 → Enter 回填路径 → Enter 退出。
-字符串已复制到剪贴板；可直接 Ctrl+V 粘贴，或
+字符串已复制到剪贴板；可直接 Ctrl+V 粘贴，或直接运行：
 chasm seed download /path/to/file | sh
 
 ⚙️ 自定义补全
