@@ -3,7 +3,7 @@
 
 Written in pure Go and delivered as a single binary that works out-of-the-box on **macOS** and **Windows**.  
 Core mission: **assemble the most complex commands with the fewest keystrokes**.
-
+[中文](README_CN.MD)
 ---
 
 ## ✨ Key Features
