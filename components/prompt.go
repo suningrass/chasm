@@ -133,6 +133,7 @@ func (p Promptmodel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				p.FileSelect.ResetMatched()
 				//p.Input.Blur()
 				//p.vlog.SetValue(p.Input.Value())
+				//p.FileSelect.Match("")
 				return p, cmd
 
 			case "ctrl+n": //切换到arglist模式
@@ -183,7 +184,7 @@ func (p Promptmodel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 			case " ":
 				p.FileSelect.ResetMatched()
-
+				//p.FileSelect.Match(currentword)
 			case "tab": //选择
 				p.FileSelect.Choose()
 				//p.FileSelect.ResetMatched()
@@ -193,7 +194,7 @@ func (p Promptmodel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 					p.replaceCursorWord(currentword, startpos, endpos, p.FileSelect.GiveWord())
 				}
 				p.Mode = CmdMode
-				//p.FileSelect.ResetMatched()
+				p.FileSelect.ResetMatched()
 				//p.Input.Focus()
 				return p, cmd
 

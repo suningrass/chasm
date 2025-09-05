@@ -22,6 +22,7 @@ type FileChoose struct {
 	IfMatching   bool     // 是否有匹配的提示单词
 	//选择列表
 	chooselist map[string]bool
+	debug      string
 }
 
 func CreateFileChoose(path string) *FileChoose {
@@ -32,6 +33,7 @@ func CreateFileChoose(path string) *FileChoose {
 		IfMatching:   false,
 		Matched:      []string{},
 		CurrentPath:  path,
+		debug:        "",
 	}
 
 	fc.chooselist = setchooselist(fc.filelist)
@@ -245,12 +247,18 @@ func (f *FileChoose) ResetMatched() {
 	}
 
 	f.CurrentPath = pwd
-	for name := range f.chooselist {
+	f.filelist = loaddir(f.CurrentPath)
+	f.chooselist = setchooselist(f.filelist)
+	//f.chooselist = setchooselist(loaddir(f.CurrentPath))
+
+	/* for name := range f.chooselist {
 		f.chooselist[name] = false
-	}
+	} */
 	// f.CurrentIndex = -1
 	// f.Matched = []string{}
 	f.Match("")
+	//debug
+	//f.debug = fmt.Sprintf("%v", f.chooselist)
 }
 
 func (f *FileChoose) Render() string {
@@ -310,7 +318,7 @@ func (f *FileChoose) Render() string {
 		subdir := f.Matched[f.CurrentIndex]
 		output += "subdir: " + subdir + "\n"
 	} */
-
+	//output += "pwd: " + f.debug + "\n"
 	//output += fmt.Sprintf("debug: top %d, end %d, matchlen %d, currentindex %d\n", top, end, len(f.Matched), f.CurrentIndex)
 	//end debug
 	output += fmt.Sprintf("total: %d, currentNO: %d\n", len(f.Matched), f.CurrentIndex)

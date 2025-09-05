@@ -2,9 +2,9 @@ package components
 
 const configStr = `
 [cmd]
-root = ["go","goctl","brew","filecmp"]
+root = ["go","goctl","brew","hashcmp"]
 
-[filecmp]
+[hashcmp]
 dup = "--byname,--byhash,--output"
 sml = "--simdist,--output"
 cpuhash = "--sha256,--md5,--fastfinger,--output"
