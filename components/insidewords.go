@@ -7,7 +7,7 @@ root = ["go","goctl","brew","hashcmp"]
 [hashcmp]
 dup = "--byname,--byhash,--output"
 sml = "--simdist,--output"
-cpuhash = "--sha256,--md5,--fastfinger,--output"
+cpuhash = "--sha256,--md5,--fastfinger,--output,--force,--ff"
 mgtvs = "--desfile"
 
 # Go 命令全集 TOML 主命令固定为 go
