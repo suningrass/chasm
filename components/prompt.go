@@ -182,9 +182,9 @@ func (p Promptmodel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			p.FileSelect.Choose() */
 			//return p, cmd
 
-			case " ":
-				p.FileSelect.ResetMatched()
-				//p.FileSelect.Match(currentword)
+			/* case " ":
+			p.FileSelect.ResetMatched() */
+
 			case "tab": //选择
 				p.FileSelect.Choose()
 				//p.FileSelect.ResetMatched()
