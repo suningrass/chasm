@@ -5,7 +5,7 @@ const configStr = `
 root = ["go","goctl","brew","hashcmp"]
 
 [hashcmp]
-dup = "--byname,--byhash,--output"
+dump = "--byname,--byhash,--output"
 sml = "--simdist,--output"
 cpuhash = "--sha256,--md5,--fastfinger,--output,--force,--ff"
 mgtvs = "--desfile"
