@@ -5,11 +5,10 @@ const configStr = `
 root = ["go","goctl","brew","hashcmp"]
 
 [hashcmp]
-dump = "--byname,--byhash,--output"
-sml = "--byls,--byjw,--byjb,--simdist,-d,--output,-o"
+dump = "--byname,--byhash,--byreg,--output,-o"
+sml = "--byls,--byjw,--byjb,--bysh,--output,-o"
 cpuhash = "--sha256,--md5,--fastfinger,--output,-o,--force,-f"
-simhash = "--dist,-d,--output,-o"
-mgtsv = "--desfile"
+mgtsv = "--desfile,-d"
 
 # Go 命令全集 TOML 主命令固定为 go
 [go]
